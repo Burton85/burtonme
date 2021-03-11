@@ -1,0 +1,33 @@
+.hr {
+    position: relative;
+    z-index: 99;
+    display: block;
+    height: 3rem;
+    width: 100%;
+    max-width: 732px;
+    padding: 0;
+    margin-bottom: 3rem;
+    border: 0;
+    color: transparent;
+    clear: both;
+    border-radius: 10rem;
+    background-color: $sub_color;
+    &::after {
+        font-family: dosis;
+        display: block;
+        top: -10%;
+        left: 40%;
+        content: 'burton.me';
+        opacity: 0;
+        color: transparent;
+        position: absolute;
+        color: $main_color;
+    }
+    &__action {
+        animation: hrAction 2s alternate 4s forwards;
+        &::after {
+            animation: beShow 2s alternate 4s forwards;
+            transform: scaleY(0.5);
+        }
+    }
+}

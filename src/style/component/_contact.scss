@@ -1,0 +1,27 @@
+.contact {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    .btn {
+        opacity: 0;
+    }
+    &__action {
+        .btn {
+            &:nth-of-type(1) {
+                animation: goUp 1s alternate 4.5s forwards;
+            }
+            &:nth-of-type(2) {
+                animation: goUp 1s alternate 5s forwards;
+            }
+            &:nth-of-type(3) {
+                animation: goUp 1s alternate 5.5s forwards;
+            }
+            &:nth-of-type(4) {
+                animation: goUp 1s alternate 6s forwards;
+            }
+            &:nth-of-type(5) {
+                animation: goUp 1s alternate 6.5s forwards;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.btn {
+    background-color: $font_color;
+    color: $main_color;
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 1rem;
+    &:hover {
+        background-color: #fff;
+        color: #c66;
+    }
+}

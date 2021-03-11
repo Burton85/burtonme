@@ -1,0 +1,50 @@
+.ico {
+    &::before {
+        font-family: 'icomoon';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        // width: 3em;
+        text-align: center;
+        letter-spacing: normal;
+        display: inline-block;
+        vertical-align: -10%;
+        -webkit-font-smoothing: antialiased;
+    }
+    &-pencil::before {
+        content: '\e905';
+    }
+    &-menu::before {
+        content: '\e9bf';
+    }
+    &-camera::before {
+        content: '\e90f';
+    }
+    &-website::before {
+        content: '\e9c9';
+    }
+    &-profile::before {
+        content: '\e923';
+    }
+    &-remove::before {
+        content: '\ea0f';
+    }
+    &-instagram::before {
+        content: '\ea92';
+    }
+    &-facebook::before {
+        content: '\ea91';
+    }
+    &-telegram::before {
+        content: '\ea95';
+    }
+    &-gmail::before {
+        content: '\ea8a';
+    }
+    &-github::before {
+        content: '\eab0';
+    }
+    &-phone::before {
+        content: '\e942';
+    }
+}

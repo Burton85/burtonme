@@ -1,0 +1,25 @@
+.btn,
+.page-title,
+.post-title,
+.list-title,
+.main-title,
+.sub-title,
+.nav-menu li a,
+.post-header .post-meta {
+    font-family: dosis, 'HelveticaNeue-CondensedBold', 'trebuchet ms', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.page-title {
+    opacity: 0;
+    margin-bottom: 0;
+    font-size: 3.75em;
+    font-weight: bolder;
+    word-wrap: break-word;
+    line-height: 1;
+    &__action {
+        animation: goDown 2s alternate 4s forwards;
+    }
+}
