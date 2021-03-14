@@ -6,7 +6,7 @@ export default function (type) {
     return createRouter({
         history: routerHistory,
         routes: [
-            { path: '/', component: () => import('./views/Homepage.vue'), props: true },
+            { path: '/', component: () => import('./views/Home.vue'), props: true },
             { path: '/notes', component: () => import('./views/PageA.vue'), props: true },
             { path: '/photos', component: () => import('./views/PageB.vue'), props: true },
             { path: '/projects', component: () => import('./views/PageA.vue'), props: true },

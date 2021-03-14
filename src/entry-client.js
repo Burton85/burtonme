@@ -1,14 +1,19 @@
 import { createSSRApp, createRenderer } from 'vue';
 import App from './App.vue';
 import './style/main.scss';
+import com from './js/common.js';
 import createRouter from './router';
+import store from './store';
+
+// // const { FontCtl } = com;
 
 const router = createRouter('client');
 
 const app = createSSRApp(App);
-app.use(router);
+app.config.globalProperties.$com = com;
 
-// this will hydrate the app
+app.use(router).use(store);
+
 router.isReady().then(() => {
     app.mount('#app', true);
 });

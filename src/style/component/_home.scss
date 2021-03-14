@@ -1,13 +1,19 @@
 .home {
     &-section {
         font-size: 2.8rem;
+        opacity: 0;
         margin: 2rem 0;
+        &__action {
+            animation: goUp 2s alternate 6s forwards;
+        }
     }
     &-title {
         font-weight: bold;
         padding: 2rem 4rem;
+        letter-spacing: 0.5rem;
         // text-align: center;
         .ico::before {
+            margin-right: 2rem;
             font-size: 3rem;
         }
     }
@@ -17,6 +23,10 @@
     }
     &-item {
         cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         font-size: 3.6rem;
         letter-spacing: 3px;
         padding: 3rem 4rem;
@@ -28,6 +38,21 @@
         &:hover {
             color: $sub_color;
             background-color: $main_color_op7;
+        }
+        img {
+            border: 0.6rem solid $font_color;
+            border-radius: 1rem;
+            width: 15rem;
+            box-sizing: border-box;
+        }
+    }
+    &-footer {
+        width: 100%;
+        font-family: bitter;
+        display: flex;
+        justify-content: center;
+        span {
+            margin: 0 2rem;
         }
     }
 }

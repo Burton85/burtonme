@@ -18,5 +18,8 @@ export default {
             count: 0,
         };
     },
+    mounted() {
+        this.$com.FontCtl(document, window);
+    },
 };
 </script>
