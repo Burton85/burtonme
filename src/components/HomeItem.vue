@@ -2,7 +2,11 @@
     <li class="home-item">
         <h3 class="home-item-title">{{ homeItemList.name }}</h3>
         <!-- <h4 class="home-item-subtitle">{{ homeItemList.checkItems ? homeItemList.checkItems[0].name : '' }}</h4> -->
-        <img :src="homeItemList.checkItems ? homeItemList.checkItems[0].name : ''" alt="" />
+        <img
+            v-if="homeItemList.checkItems && homeItemList.checkItems[0].name.includes('https')"
+            :src="homeItemList.checkItems[0].name"
+            alt=""
+        />
     </li>
 </template>
 <script>

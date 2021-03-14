@@ -11,16 +11,16 @@
         vertical-align: -10%;
         -webkit-font-smoothing: antialiased;
     }
-    &-pencil::before {
+    &-note::before {
         content: '\e905';
     }
     &-menu::before {
         content: '\e9bf';
     }
-    &-camera::before {
+    &-photo::before {
         content: '\e90f';
     }
-    &-website::before {
+    &-project::before {
         content: '\e9c9';
     }
     &-profile::before {

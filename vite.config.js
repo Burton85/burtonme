@@ -1,3 +1,4 @@
+import path from 'path';
 module.exports = {
     rollupInputOptions: {
         preserveEntrySignatures: 'strict',
@@ -7,5 +8,8 @@ module.exports = {
     },
     rollupOutputOptions: {
         preserveModules: true,
+    },
+    alias: {
+        '@': path.resolve(__dirname, './src'),
     },
 };

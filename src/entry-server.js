@@ -30,5 +30,5 @@ server.get('*', (req, res) => {
     });
 });
 
-console.log(`started server on port ${config.port}`);
+console.log(`started server on port http://localhost:${config.port}`);
 server.listen(config.port);

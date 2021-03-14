@@ -10,5 +10,19 @@
     &:hover {
         background-color: #fff;
         color: #c66;
+        a {
+            &:hover {
+                background-color: #fff;
+                color: #c66;
+            }
+        }
+    }
+    a {
+        color: $main_color;
+        font-size: 1.6rem;
+        border-radius: 1rem;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 1rem;
     }
 }

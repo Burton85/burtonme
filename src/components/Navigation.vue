@@ -10,22 +10,22 @@
         </ul>
         <ul class="nav-menu">
             <li @click="closeMenu()">
-                <router-link to="/notes">
-                    <i class="ico ico-pencil"></i>
+                <router-link to="/note">
+                    <i class="ico ico-note"></i>
                     <p>Notes</p>
                 </router-link>
             </li>
 
             <li @click="closeMenu()">
-                <router-link to="/photos">
-                    <i class="ico ico-camera"></i>
+                <router-link to="/photo">
+                    <i class="ico ico-photo"></i>
                     <p>Photos</p>
                 </router-link>
             </li>
 
             <li @click="closeMenu()">
-                <router-link to="/projects">
-                    <i class="ico ico-website"></i>
+                <router-link to="/project">
+                    <i class="ico ico-project"></i>
                     <p>Projects</p>
                 </router-link>
             </li>
