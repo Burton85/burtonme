@@ -11,6 +11,10 @@ export default function (type) {
             { path: '/photo', component: () => import('./views/SubPage.vue'), props: true },
             { path: '/project', component: () => import('./views/SubPage.vue'), props: true },
             { path: '/profile', component: () => import('./views/SubPage.vue'), props: true },
+            { path: '/notedetail', component: () => import('./views/NoteDetail.vue'), props: true },
+            { path: '/projectdetail', component: () => import('./views/ProjectDetail.vue'), props: true },
+            { path: '/photodetail', component: () => import('./views/photoDetail.vue'), props: true },
+            { path: '/profiledetail', component: () => import('./views/profileDetail.vue'), props: true },
         ],
     });
 }

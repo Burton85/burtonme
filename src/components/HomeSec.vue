@@ -3,9 +3,16 @@
         <h2 class="home-title">
             <i :class="'ico ico-' + homeSecList.icon"></i>
             {{ homeSecList.name }}
+            <i :class="isExpand ? 'ico ico-expand ico-expand__expand' : 'ico ico-expand'" @click="expandList()"></i>
         </h2>
-        <ul class="home-list">
-            <HomeItem v-for="(item, index) in contentList" :homeItemList="item" :key="index"></HomeItem>
+        <ul class="home-list" v-if="isExpand">
+            <HomeItem
+                v-for="(item, index) in contentList"
+                :homeItemList="item"
+                :index="index + ''"
+                :key="index"
+                :type="homeSecList.icon"
+            ></HomeItem>
         </ul>
     </section>
 </template>
@@ -50,6 +57,7 @@ export default {
     data() {
         return {
             isMounted: false,
+            isExpand: true,
         };
     },
     mounted() {
@@ -78,6 +86,11 @@ export default {
             default:
                 break;
         }
+    },
+    methods: {
+        expandList() {
+            this.isExpand = !this.isExpand;
+        },
     },
 };
 </script>

@@ -18,7 +18,9 @@ export default {
             count: 0,
         };
     },
+    methods: {},
     mounted() {
+        document.documentElement.scrollTop = 0;
         this.$com.FontCtl(document, window);
     },
 };

@@ -5,7 +5,13 @@
             {{ $route.path.slice(1).toUpperCase() }}
         </h2>
         <ul class="home-list">
-            <HomeItem v-for="(item, index) in contentList" :homeItemList="item" :key="index"></HomeItem>
+            <HomeItem
+                v-for="(item, index) in contentList"
+                :type="$route.path.slice(1)"
+                :homeItemList="item"
+                :key="index"
+                :index="index"
+            ></HomeItem>
         </ul>
     </section>
 </template>

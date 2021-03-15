@@ -1,0 +1,19 @@
+.note {
+    &Ul {
+        font-size: 2.4rem;
+        width: 90%;
+        line-height: 1.6;
+        padding: 2rem 5rem;
+    }
+    &Ol {
+        display: flex;
+        justify-content: center;
+        margin: 3rem auto;
+        font-family: bitter;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    &Code {
+        background-color: $main_color_op7;
+    }
+}

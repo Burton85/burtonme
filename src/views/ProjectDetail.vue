@@ -1,0 +1,27 @@
+<template>
+    <div class="project">
+        <h2 class="home-title">
+            <i :class="'ico ico-note'"></i>
+            {{ itemList[$route.query.id].name }}
+        </h2>
+        <ul>
+            <li v-for="(item, index) in itemList[$route.query.id].checkItems" :key="index">
+                <p :class="/^[0-9]/.test(item.name) ? 'noteUl' : 'noteOl'">{{ item.name }}</p>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+    computed: {
+        ...mapGetters(['getProjectList']),
+        itemList() {
+            return this.getProjectList;
+        },
+    },
+    filters: {},
+};
+</script>

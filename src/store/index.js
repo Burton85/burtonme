@@ -3,9 +3,11 @@ import dataGetter from '../js/dataGetter.js';
 
 export default createStore({
     state: {
-        projectList: [{ name: 'nodata' }, { name: 'nodata' }, { name: 'nodata' }],
-        noteList: [{ name: 'nodata' }, { name: 'nodata' }, { name: 'nodata' }],
-        photoList: [{ name: 'nodata' }, { name: 'nodata' }, { name: 'nodata' }],
+        projectList: [
+            { name: 'projectList', checkItems: [{ name: 'nodata' }, { name: 'nodata' }, { name: 'nodata' }] },
+        ],
+        noteList: [{ name: 'noteList', checkItems: [{ name: 'nodata' }, { name: 'nodata' }, { name: 'nodata' }] }],
+        photoList: [{ name: 'photoList', checkItems: [{ name: 'nodata' }, { name: 'nodata' }, { name: 'nodata' }] }],
     },
     mutations: {
         project(state, result) {
