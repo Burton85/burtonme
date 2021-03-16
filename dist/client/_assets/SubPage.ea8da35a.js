@@ -1,0 +1,1 @@
+import{c as e,o as r}from"./entry-client.53038bcc.js";var a={name:"PageA",props:{msg:String},mounted(){this.randomNumber=Math.random()},data:()=>({randomNumber:0,initialized:!1,count:0})};a.render=function(a,n,t,i,o,m){return r(),e("h1",null,"Page A")},a.__file="src/views/SubPage.vue";export default a;
