@@ -1,0 +1,17 @@
+.project {
+    &-img {
+        width: 90%;
+        margin: 5%;
+    }
+    &-link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+    &-text {
+        width: 80%;
+        margin: 10%;
+        line-height: 2;
+    }
+}

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="sub-page">
         <h2 class="home-title">
             <i :class="'ico ico-' + $route.path.slice(1)"></i>
             {{ $route.path.slice(1).toUpperCase() }}
@@ -26,23 +26,33 @@ export default {
         HomeItem,
     },
     computed: {
-        ...mapGetters(['getProjectList', 'getNoteList', 'getPhotoList']),
         contentList() {
-            switch (this.$route.path) {
-                case '/project':
-                    return this.getProjectList;
+            let data;
+            let type = this.$route.path.slice(1);
+            switch (type) {
+                case 'project':
+                    data = this.getProjectList;
                     break;
-                case '/note':
-                    return this.getNoteList;
+                case 'note':
+                    data = this.getNoteList;
                     break;
-                case '/photo':
-                    return this.getPhotoList;
+                case 'photo':
+                    data = this.getPhotoList;
                     break;
                 default:
-                    return [{ name: 'This is my profile' }];
+                    data = this.getProfileList;
                     break;
             }
+            if (data && data[0].checkItems[0].name == 'nodata') {
+                this.$store.dispatch('getTrelloJson', {
+                    name: type,
+                });
+                return data;
+            } else {
+                return data;
+            }
         },
+        ...mapGetters(['getProjectList', 'getNoteList', 'getPhotoList', 'getProfileList']),
     },
 };
 </script>

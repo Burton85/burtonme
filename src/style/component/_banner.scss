@@ -26,16 +26,16 @@
     }
     &__action {
         .gh_black {
-            animation: beHide 2s alternate 2s forwards;
+            animation: beHide 2s alternate 1s forwards;
         }
         .gh_main {
-            animation: beShow 2s alternate 2s forwards;
+            animation: beShow 2s alternate 1s forwards;
         }
         .gh_left {
-            animation: goLeft 2s alternate 4s forwards;
+            animation: goLeft 2s alternate 2s forwards;
         }
         .gh_right {
-            animation: goRight 2s alternate 4s forwards;
+            animation: goRight 2s alternate 2s forwards;
         }
     }
 }

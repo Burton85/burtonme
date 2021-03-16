@@ -1,11 +1,11 @@
 <template>
-    <div class="photo">
+    <div class="sub-page photo">
         <h2 class="home-title">
             <i :class="'ico ico-photo'"></i>
-            {{ itemList[$route.query.id].name }}
+            {{ itemList[id].name }}
         </h2>
         <ul>
-            <li v-for="(item, index) in itemList[$route.query.id].checkItems" :key="index">
+            <li v-for="(item, index) in itemList[id].checkItems" :key="index">
                 <img :src="item.name" :alt="item.name" />
             </li>
         </ul>
@@ -21,7 +21,9 @@ export default {
         itemList() {
             return this.getPhotoList;
         },
+        id() {
+            return this.$route.query.id;
+        },
     },
-    filters: {},
 };
 </script>

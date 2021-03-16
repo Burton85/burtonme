@@ -1,14 +1,16 @@
 <template>
-    <div class="project">
+    <div class="sub-page project">
         <h2 class="home-title">
             <i :class="'ico ico-note'"></i>
-            {{ itemList[$route.query.id].name }}
+            {{ itemList[id].name }}
         </h2>
-        <ul>
-            <li v-for="(item, index) in itemList[$route.query.id].checkItems" :key="index">
-                <p :class="/^[0-9]/.test(item.name) ? 'noteUl' : 'noteOl'">{{ item.name }}</p>
-            </li>
-        </ul>
+        <a class="project-link" :href="itemList[id].checkItems[1].name" target="_blank">
+            <img class="project-img" :src="itemList[id].checkItems[0].name" :alt="itemList[id].name" />
+        </a>
+        <a class="project-link" :href="itemList[id].checkItems[1].name" target="_blank">{{
+            itemList[id].checkItems[1].name
+        }}</a>
+        <p class="project-text" v-html="itemList[id].checkItems[2].name"></p>
     </div>
 </template>
 
@@ -20,6 +22,9 @@ export default {
         ...mapGetters(['getProjectList']),
         itemList() {
             return this.getProjectList;
+        },
+        id() {
+            return this.$route.query.id;
         },
     },
     filters: {},

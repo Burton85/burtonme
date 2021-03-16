@@ -1,5 +1,5 @@
 <template>
-    <div class="profile">profile</div>
+    <div class="sub-page profile">PROFILE</div>
 </template>
 
 <script>

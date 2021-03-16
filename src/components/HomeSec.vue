@@ -36,7 +36,7 @@ export default {
         HomeItem,
     },
     computed: {
-        ...mapGetters(['getProjectList', 'getNoteList', 'getPhotoList']),
+        ...mapGetters(['getProjectList', 'getNoteList', 'getPhotoList', 'getProfileList']),
         contentList() {
             switch (this.homeSecList.name) {
                 case 'Recently Projects':
@@ -48,8 +48,8 @@ export default {
                 case 'Photos Albums':
                     return this.getPhotoList;
                     break;
-                default:
-                    return [{ name: 'This is my profile' }];
+                case 'My Profiles':
+                    return this.getProfileList;
                     break;
             }
         },
@@ -68,22 +68,22 @@ export default {
             case 'Recently Projects':
                 this.$store.dispatch('getTrelloJson', {
                     name: 'project',
-                    url: this.homeSecList.contentRef,
                 });
                 break;
             case 'Learning Notes':
                 this.$store.dispatch('getTrelloJson', {
                     name: 'note',
-                    url: this.homeSecList.contentRef,
                 });
                 break;
             case 'Photos Albums':
                 this.$store.dispatch('getTrelloJson', {
                     name: 'photo',
-                    url: this.homeSecList.contentRef,
                 });
                 break;
             default:
+                this.$store.dispatch('getTrelloJson', {
+                    name: 'profile',
+                });
                 break;
         }
     },
